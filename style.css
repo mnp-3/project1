@@ -41,6 +41,13 @@ p {
   color: rgb(0, 0, 0);
 }
 
+h2 {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
 
 /*header text */
 header h1 {
@@ -48,13 +55,6 @@ header h1 {
   font-family: Georgia, serif;
   font-size: 40px;
   margin-bottom: 20px; /* space between header and nav */
-}
-
-h2 {
-  text-align: center;
-  font-family: Georgia, serif;
-  font-size: 30px;
-  margin-bottom: 5px;
 }
 
 
@@ -82,12 +82,14 @@ header nav a:hover {
   display: flex;
   justify-content: space-between; /* puts text left, image right */
   align-items: center;            /* vertically align */
-  margin: 40px;
+  margin: 15px;
 }
 
 /* Make text take half the space */
 .left-text {
   flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
   padding-right: 40px;
 }
 
@@ -99,6 +101,8 @@ header nav a:hover {
 
 .right-text {
   flex: 1;
+  max-width: 700px;
+  margin: 0 auto;
   padding-left: 40px;  /* space from image */
   order: 2;             /* move to the right */
 }
