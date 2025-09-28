@@ -212,11 +212,11 @@ blockquote footer {
 }
 
 .side-nav {
-  flex: 1;
+  flex:1;
   position: sticky;       /* visible while scrolling */
-  max-width: 250px;
+  max-width: fit-content;
   height: fit-content;
-  background: #ffecd3;
+  background: #ffe9e2;
   padding: 10px;
   margin: 15px;
   top: 15px;
@@ -236,9 +236,9 @@ blockquote footer {
 .side-nav a {
   text-decoration: none;
   font-weight: bolder;
-  color: #ff7641
+  color: #003b00;
 }
 
 .side-nav a:hover {
-  color: #116400;
+  color: #ff7641;
 }
