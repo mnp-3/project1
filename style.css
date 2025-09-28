@@ -21,12 +21,12 @@ body {
 }
 
 a {
-  color: #eca200;       /* blue link */
+  color: #ff5410;       /* blue link */
   text-decoration: none; /* remove underline */
 }
 
 a:hover {
-  color: #ff5410;       /* change color on hover */
+  color: #ffba39;       /* change color on hover */
 }
 
 
@@ -74,43 +74,24 @@ header nav a {
 }
 
 header nav a:hover {
-  color: #eca200;
+  color: #ff723a;
 }
 
-/* Layout for text + image side by side */
-.txt-img {
-  display: flex;
-  justify-content: space-between; /* puts text left, image right */
-  align-items: center;            /* vertically align */
-  margin: 15px;
+/* ABOUT PAGE */
+.about-img {
+  float: right;           /* image goes to the right side */
+  max-width: 300px;       /* keeps image from being too big */
+  width: 100%;            /* makes it shrink responsively */
+  height: auto;           /* keeps proportions */
+  margin: 0 0 15px 20px;  /* spacing around the image */
+  border-radius: 10px;    /* optional styling */
 }
 
-/* Make text take half the space */
-.left-text {
-  flex: 1;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-right: 40px;
-}
-
-/* Make image take the other half */
-.right-img {
-  max-width: 50%;   /* control size */
-  border-radius: 20px; /* optional styling */
-}
-
-.right-text {
-  flex: 1;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-left: 40px;  /* space from image */
-  order: 2;             /* move to the right */
-}
-
-.left-img {
-  max-width: 50%;
-  border-radius: 20px;
-  order: 1;             /* move to the left */
+.about {
+  max-width: 900px;       /* keep text readable */
+  margin: 0 auto;         /* center section on the page */
+  padding: 20px;
+  line-height: 1.6;       /* improves readability */
 }
 
 
@@ -166,7 +147,7 @@ header nav a:hover {
 
 /* Front design */
 .flip-card-front {
-  background-color: #fff9d7;
+  background-color: #ffe9e2;
   color: #272727;
   display: flex;                  /* enable flexbox */
   flex-direction: column; 
@@ -179,7 +160,7 @@ header nav a:hover {
 
 /* Back design */
 .flip-card-back {
-  background-color: #fff9d7;
+  background-color: #ffe9e2;
   transform: rotateY(180deg);
   display: flex;                  /* enable flexbox */
   justify-content: center;        /* center vertically */
@@ -205,7 +186,7 @@ header nav a:hover {
 }
 
 .quotes-section {
-  flex: 1;
+  
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -230,12 +211,14 @@ blockquote footer {
   color: #666;
 }
 
-
 .side-nav {
+  flex: 1;
   position: sticky;       /* visible while scrolling */
-  width: 250px;
+  max-width: 250px;
+  height: fit-content;
   background: #ffecd3;
-  padding: 15px;
+  padding: 10px;
+  margin: 15px;
   top: 15px;
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(180, 103, 1, 0.322);
