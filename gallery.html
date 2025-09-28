@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>MPU Gallery</title>
+
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    
+
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+     <header>
+        <h1>
+           Gallery 
+        </h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="characters.html">Characters</a>
+            <a href="quotes.html">Favorite Quotes</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <p style="text-align: center;">♡ This page includes fan art collages and images that remind me of the Magnolia Parks series ♡</p>
+
+    <div class="gallery" id="gallery"></div>
+
+    <script>
+        // Array of image URLs
+        const images = [
+        'images/magnoliaparks.jpg',
+        'images/daisyhaites.jpg',
+        'images/thegreatundoing.jpg',
+        'images/longwayhome.jpg',
+        'images/intothedark.jpg',
+        'images/boxset.jpg',
+        'images/parks.jpg',
+        'images/tower.jpg',
+        'images/img1.jpg',
+        'images/img2.jpg',
+        'images/img3.jpg',
+        'images/img4.jpg',
+        'images/img5.jpg',
+        'images/img6.jpg',
+        'images/img7.jpg',
+        'images/img8.jpg',
+        'images/img9.jpg',
+        'images/img10.jpg',
+        'images/img11.jpg',
+        'images/img12.jpg',
+        'images/img13.jpg',
+        ];
+
+        // Shuffle images
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        const shuffledImages = shuffleArray(images);
+        const galleryDiv = document.getElementById('gallery');
+
+        shuffledImages.forEach(src => {
+            const img = document.createElement('img');
+            img.src = src;
+
+            // Random width
+            const randomWidth = Math.floor(Math.random() * 171) + 300;
+            img.style.width = randomWidth + "px";
+
+            galleryDiv.appendChild(img);
+        });
+    </script>
+
+    <div style="display: flex; justify-content: center; margin: 20px 0;">
+      <iframe style="border-radius:12px" 
+        src="https://open.spotify.com/embed/playlist/3ef0UoGmDyAkwi6SQ31eeT?utm_source=generator" 
+        width="50%" height="152" frameborder="0" 
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </body>
+</html>
