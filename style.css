@@ -49,22 +49,22 @@ h2 {
 }
 
 
-/*header text */
+
 header h1 {
   text-align: center;
   font-family: Georgia, serif;
   font-size: 40px;
-  margin-bottom: 20px; /* space between header and nav */
+  margin-bottom: 20px;
 }
 
 
-/*navigation links */
+
 header nav {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* Style navigation links */
+
 header nav a {
   margin: 0 15px;
   text-decoration: none;
@@ -79,22 +79,23 @@ header nav a:hover {
 
 /* ABOUT PAGE */
 .about-img {
-  float: right;           /* image goes to the right side */
-  max-width: 300px;       /* keeps image from being too big */
-  width: 100%;            /* makes it shrink responsively */
-  height: auto;           /* keeps proportions */
-  margin: 0 0 15px 20px;  /* spacing around the image */
-  border-radius: 10px;    /* optional styling */
+  float: right;           
+  max-width: 300px;       
+  width: 100%;            
+  height: auto;           
+  margin: 0 0 15px 20px;  
+  border-radius: 10px;    
 }
 
 .about {
-  max-width: 900px;       /* keep text readable */
-  margin: 0 auto;         /* center section on the page */
+  max-width: 900px;       
+  margin: 0 auto;        
   padding: 20px;
-  line-height: 1.6;       /* improves readability */
+  line-height: 1.6;       
 }
 
 
+/* GALLERY PAGE */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -103,6 +104,7 @@ header nav a:hover {
   margin: 20px 0;
 }
 
+
 .gallery img {
   border-radius: 10px;
   object-fit: cover;
@@ -110,16 +112,35 @@ header nav a:hover {
 }
 
 
-/* Flip card container */
+.gallery img:nth-child(5n+1) { width: 300px; }
+.gallery img:nth-child(5n+2) { width: 350px; }
+.gallery img:nth-child(5n+3) { width: 400px; }
+.gallery img:nth-child(5n+4) { width: 450px; }
+.gallery img:nth-child(5n+5) { width: 500px; }
+
+
+/* element used: figcaption */
+figure {
+  margin: 20px auto;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #363636;
+}
+
+/* CHARACTERS PAGE */
 .flip-card {
   background-color: transparent;
   width: 300px;
   height: 400px;
-  perspective: 1000px; /* gives the 3D effect */
+  perspective: 1000px;
   margin: 20px;
 }
 
-/* Inner wrapper */
+
 .flip-card-inner {
   position: relative;
   width: 100%;
@@ -128,43 +149,42 @@ header nav a:hover {
   transform-style: preserve-3d;
 }
 
-/* Trigger flip on hover */
+
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-/* Front and back sides */
+
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden; /* hides the back side when not facing */
+  backface-visibility: hidden; 
   border-radius: 12px;
   box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
   padding: 20px;
   text-align: center;
 }
 
-/* Front design */
+
 .flip-card-front {
   background-color: #ffe9e2;
   color: #272727;
-  display: flex;                  /* enable flexbox */
+  display: flex;                  
   flex-direction: column; 
-  justify-content: center;        /* center vertically */
-  align-items: center;            /* center horizontally */
+  justify-content: center;        
+  align-items: center;            
   text-align: center; 
   padding: 20px;
   height: 100%;  
 }
 
-/* Back design */
+
 .flip-card-back {
   background-color: #ffe9e2;
   transform: rotateY(180deg);
-  display: flex;                  /* enable flexbox */
-  justify-content: center;        /* center vertically */
-  align-items: center; 
+  display: flex;                  
+  justify-content: center;     
 }
 
 .flip-card-back img {
@@ -180,13 +200,14 @@ header nav a:hover {
   gap: 30px;
 }
 
+
+/* QUOTE PAGE */
 .quotepage-layout {
   display: flex;
   align-items: flex-start;
 }
 
 .quotes-section {
-  
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
@@ -213,7 +234,7 @@ blockquote footer {
 
 .side-nav {
   flex:1;
-  position: sticky;       /* visible while scrolling */
+  position: sticky;
   max-width: fit-content;
   height: fit-content;
   background: #ffe9e2;

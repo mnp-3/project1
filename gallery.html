@@ -32,66 +32,44 @@
 
     <p style="text-align: center;">♡ This page includes fan art collages and images that remind me of the Magnolia Parks series ♡</p>
 
-    <div class="gallery" id="gallery"></div>
+    <div class="gallery">
+      <img src="images/magnoliaparks.jpg" alt="">
+      <img src="images/daisyhaites.jpg" alt="">
+      <img src="images/thegreatundoing.jpg" alt="">
+      <img src="images/longwayhome.jpg" alt="">
+      <img src="images/intothedark.jpg" alt="">
+      <img src="images/boxset.jpg" alt="">
+      <img src="images/parks.jpg" alt="">
+      <img src="images/tower.jpg" alt="">
+      <img src="images/img1.jpg" alt="">
+      <img src="images/img2.jpg" alt="">
+      <img src="images/img3.jpg" alt="">
+      <img src="images/img4.jpg" alt="">
+      <img src="images/img5.jpg" alt="">
+      <img src="images/img6.jpg" alt="">
+      <img src="images/img7.jpg" alt="">
+      <img src="images/img8.jpg" alt="">
+      <img src="images/img9.jpg" alt="">
+      <img src="images/img10.jpg" alt="">
+      <img src="images/img11.jpg" alt="">
+      <img src="images/img13.jpg" alt="">
+    </div>
 
-    <script>
-        // Array of image URLs
-        const images = [
-        'images/magnoliaparks.jpg',
-        'images/daisyhaites.jpg',
-        'images/thegreatundoing.jpg',
-        'images/longwayhome.jpg',
-        'images/intothedark.jpg',
-        'images/boxset.jpg',
-        'images/parks.jpg',
-        'images/tower.jpg',
-        'images/img1.jpg',
-        'images/img2.jpg',
-        'images/img3.jpg',
-        'images/img4.jpg',
-        'images/img5.jpg',
-        'images/img6.jpg',
-        'images/img7.jpg',
-        'images/img8.jpg',
-        'images/img9.jpg',
-        'images/img10.jpg',
-        'images/img11.jpg',
-        'images/img12.jpg',
-        'images/img13.jpg',
-        ];
-
-        // Shuffle images
-        function shuffleArray(array) {
-            for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-            }
-            return array;
-        }
-
-        const shuffledImages = shuffleArray(images);
-        const galleryDiv = document.getElementById('gallery');
-
-        shuffledImages.forEach(src => {
-            const img = document.createElement('img');
-            img.src = src;
-
-            // Random width
-            const randomWidth = Math.floor(Math.random() * 171) + 300;
-            img.style.width = randomWidth + "px";
-
-            galleryDiv.appendChild(img);
-        });
-    </script>
-
-    <div style="display: flex; justify-content: center; margin: 20px 0;">
+    <!-- element used: 
+    figcaption -  element represents a caption or legend describing the rest of the contents of its parent <figure> element
+      
+    Attribute used:
+    allow - Specifies a Permissions Policy for the <iframe>. The policy defines what features are available to the <iframe> 
+    (for example, access to the microphone, camera, battery, web-share, etc.) based on the origin of the request.-->
+    <figure>
       <iframe style="border-radius:12px" 
         src="https://open.spotify.com/embed/playlist/3ef0UoGmDyAkwi6SQ31eeT?utm_source=generator" 
         width="50%" height="152" frameborder="0" 
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
         loading="lazy">
       </iframe>
-    </div>
-
+      <figcaption>♡ Playlist Inspired by the Series ♡</figcaption>
+    </figure>
+    
   </body>
 </html>
